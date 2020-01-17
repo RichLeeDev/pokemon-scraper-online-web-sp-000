@@ -9,13 +9,13 @@ def initialize(id:, name:, type:, db: )
   @db = db
 end
 
-def self.new_from_db(row)
-  new_pokemon = Self.new
-  new_pokemon.id = row[0]
-  new_pokemon.name = row[1]
-  new_pokemon.type = row[2]
-  new_pokemon
-end 
+# def self.new_from_db(row)
+#   new_pokemon = Self.new
+#   new_pokemon.id = row[0]
+#   new_pokemon.name = row[1]
+#   new_pokemon.type = row[2]
+#   new_pokemon
+# end 
 
 def self.save
   sql = <<-SQL
