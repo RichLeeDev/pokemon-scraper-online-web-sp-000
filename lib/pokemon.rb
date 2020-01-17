@@ -27,18 +27,18 @@ def self.save(name, type, id )
   @id = db.execute("SELECT last_insert_rowid() FROM pokemon")[0][0]
 end
 
-# # def self.find
-# #   sql = <<-SQL
-# SELECT * 
-# FROM pokemons
-# WHERE name = ?
-# LIMIT 1
-# SQL
+# def self.find
+#   sql = <<-SQL
+SELECT * 
+FROM pokemons
+WHERE name = ?
+LIMIT 1
+SQL
 
-# db.execute(sql, self.name).map do |row|
-#   self.new_from_db(row)
+db.execute(sql, self.name).map do |row|
+  self.new_from_db(row)
   
-# end 
+end 
 
 end
 
